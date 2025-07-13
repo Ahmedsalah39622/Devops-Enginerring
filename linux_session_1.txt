@@ -1,0 +1,111 @@
+pwd
+date
+cal, cal 3 2016, cal 2016
+cd, ~ mark
+whoami
+ls, ls -l, \ls -l
+ls -a  <all>
+ls -a -l, ls -al
+ls --help
+ls /home
+ls -lh
+
+clear
+reset
+exit
+ 
+passwd
+passwd <user>
+
+file /etc/passwd
+which passwd
+file /bin/passwd
+
+cat /etc/passwd
+head /etc/passwd
+head -n 5 /etc/passwd
+tail /etc/passwd
+
+wc /etc/passwd
+wc -l /etc/passwd
+wc -w /etc/passwd
+wc -c /etc/passwd, wc -m
+
+pss <TAB>
+
+cat .bash_history
+history
+!5, !-5, !ls
+
+ls;cal;date
+
+pwd && ls
+pwd || ls
+
+----------
+cd  absolue path and relative path
+cd ../..
+
+touch file
+touch file1 file2 file3
+touch "file 2"
+
+ls -R
+
+mkdir dir1
+mkdir dir1 dir2
+mkdir -p dir5/dir6/dir7
+
+cp file1 file9
+cp file1 file2 file3 /Document
+
+cp -r /etc /dir2
+cp -r /etc/* /dir2
+
+cp ~/file1 .
+
+mv file1 new_file2   rename
+mv file1 file2 file3 dir1/
+
+rm file1
+rmdir dir  
+rm -r dir1
+rm -rf dir1
+
+ls a* ls *a
+ls f? , ls f??
+
+echo hello
+z=1
+echo $z
+
+echo " today is $(date) "
+echo "the sum of 1 and 2 is $((1+2))"
+
+-----------------------
+
+ls /etc > out.txt
+echo "hello world" > out.txt
+echo "i am mohammed" >> out.txt
+
+cat file1 file2 file3 >> out.txt
+
+ls mm 2> error.txt
+ls /etc 1> out.txt
+
+ls /etc mm > out.txt 2> error.txt
+ls /etc mm > err.txt 2> err.txt
+ls /etc mm &> err.txt
+
+
+find /etc -name passwd
+find /etc =name passwd > output.txt 2> /dev/null
+
+less /etc/passwd
+more /etc/passwd
+
+ls -lR | less
+
+ls -l | tee out.txt
+
+vim myfile.txt
