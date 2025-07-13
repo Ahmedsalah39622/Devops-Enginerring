@@ -1,111 +1,88 @@
-pwd
-date
-cal, cal 3 2016, cal 2016
-cd, ~ mark
-whoami
-ls, ls -l, \ls -l
-ls -a  <all>
-ls -a -l, ls -al
-ls --help
-ls /home
-ls -lh
-
-clear
-reset
-exit
- 
-passwd
-passwd <user>
-
-file /etc/passwd
-which passwd
-file /bin/passwd
-
-cat /etc/passwd
-head /etc/passwd
-head -n 5 /etc/passwd
-tail /etc/passwd
-
-wc /etc/passwd
-wc -l /etc/passwd
-wc -w /etc/passwd
-wc -c /etc/passwd, wc -m
-
-pss <TAB>
-
-cat .bash_history
-history
-!5, !-5, !ls
-
-ls;cal;date
-
-pwd && ls
-pwd || ls
-
-----------
-cd  absolue path and relative path
-cd ../..
-
-touch file
-touch file1 file2 file3
-touch "file 2"
-
-ls -R
-
-mkdir dir1
-mkdir dir1 dir2
-mkdir -p dir5/dir6/dir7
-
-cp file1 file9
-cp file1 file2 file3 /Document
-
-cp -r /etc /dir2
-cp -r /etc/* /dir2
-
-cp ~/file1 .
-
-mv file1 new_file2   rename
-mv file1 file2 file3 dir1/
-
-rm file1
-rmdir dir  
-rm -r dir1
-rm -rf dir1
-
-ls a* ls *a
-ls f? , ls f??
-
-echo hello
-z=1
-echo $z
-
-echo " today is $(date) "
-echo "the sum of 1 and 2 is $((1+2))"
-
------------------------
-
-ls /etc > out.txt
-echo "hello world" > out.txt
-echo "i am mohammed" >> out.txt
-
-cat file1 file2 file3 >> out.txt
-
-ls mm 2> error.txt
-ls /etc 1> out.txt
-
-ls /etc mm > out.txt 2> error.txt
-ls /etc mm > err.txt 2> err.txt
-ls /etc mm &> err.txt
-
-
-find /etc -name passwd
-find /etc =name passwd > output.txt 2> /dev/null
-
-less /etc/passwd
-more /etc/passwd
-
-ls -lR | less
-
-ls -l | tee out.txt
-
-vim myfile.txt
+pwd              # Print the current working directory
+date             # Display the current date and time
+cal              # Show calendar of current month
+cal 3 2016       # Show calendar for March 2016
+cal 2016         # Show calendar for the whole year 2016
+cd               # Change to home directory
+cd ~             # Change to home directory using tilde (~)
+whoami           # Display the current logged-in username
+ls               # List directory contents
+ls -l            # List contents in long (detailed) format
+\ls -l           # Same as ls -l, but bypasses any alias defined for ls
+ls -a            # Show all files including hidden files
+ls -a -l         # Combine both: show all files with details
+ls -al           # Same as above, more concise syntax
+ls --help        # Show help info for ls command
+ls /home         # List contents of the /home directory
+ls -lh           # Long listing format with human-readable file sizes
+clear            # Clear the terminal screen
+reset            # Reset the terminal (useful if it's in a weird state)
+exit             # Exit the terminal or a shell session
+passwd           # Change your own password
+passwd <user>    # Change password for the specified user (requires sudo)
+file /etc/passwd # Show the file type of /etc/passwd
+which passwd     # Show the path of the passwd command
+file /bin/passwd # Show the file type for /bin/passwd binary
+cat /etc/passwd  # Display the content of /etc/passwd file
+head /etc/passwd # Show the first 10 lines of /etc/passwd
+head -n 5 /etc/passwd # Show the first 5 lines of /etc/passwd
+tail /etc/passwd # Show the last 10 lines of /etc/passwd
+wc /etc/passwd   # Display line, word, and byte count of the file
+wc -l /etc/passwd # Count the number of lines
+wc -w /etc/passwd # Count the number of words
+wc -c /etc/passwd # Count bytes
+wc -m /etc/passwd # Count characters
+pss <TAB>        # Autocomplete suggestion – probably meant to find a command like `ps`
+cat .bash_history # Show the command history stored in .bash_history
+history          # Display list of previously used commands
+!5               # Rerun command number 5 from history
+!-5              # Rerun the 5th most recent command
+!ls              # Rerun the last command that started with "ls"
+ls;cal;date      # Run multiple commands in sequence
+pwd && ls        # Run ls only if pwd is successful
+pwd || ls        # Run ls only if pwd fails
+cd /path/to/dir  # Change to an absolute path
+cd ../../        # Move two directories up (relative path)
+touch file       # Create an empty file named 'file'
+touch file1 file2 file3       # Create multiple empty files
+touch "file 2"                # Create a file with a space in its name
+ls -R             # Recursively list all directories and subdirectories
+mkdir dir1        # Create a directory named dir1
+mkdir dir1 dir2   # Create multiple directories
+mkdir -p dir5/dir6/dir7 # Create nested directories at once
+cp file1 file9    # Copy file1 to file9
+cp file1 file2 file3 /Document # Copy multiple files to /Document
+cp -r /etc /dir2  # Recursively copy /etc directory into /dir2
+cp -r /etc/* /dir2 # Recursively copy all contents of /etc into /dir2
+cp ~/file1 .      # Copy file1 from home directory to current directory
+mv file1 new_file2  # Rename file1 to new_file2
+mv file1 file2 file3 dir1/ # Move multiple files into dir1
+rm file1          # Delete file1
+rmdir dir         # Remove empty directory named dir
+rm -r dir1        # Recursively remove directory and its contents
+rm -rf dir1       # Forcefully and recursively delete dir1 without prompt
+ls a*             # List all files starting with "a"
+ls *a             # List all files ending with "a"
+ls f?             # List all files starting with "f" and any one character
+ls f??            # List all files starting with "f" and exactly two characters after
+echo hello        # Print "hello" to the terminal
+z=1               # Set variable z to 1
+echo $z           # Print the value of variable z
+echo " today is $(date) "     # Print current date using command substitution
+echo "the sum of 1 and 2 is $((1+2))" # Print result of arithmetic operation
+ls /etc > out.txt              # Redirect output to out.txt (overwrite)
+echo "hello world" > out.txt  # Overwrite out.txt with "hello world"
+echo "i am mohammed" >> out.txt # Append text to out.txt
+cat file1 file2 file3 >> out.txt # Append content of files to out.txt
+ls mm 2> error.txt             # Redirect stderr to error.txt
+ls /etc 1> out.txt             # Redirect stdout to out.txt
+ls /etc mm > out.txt 2> error.txt # Separate stdout and stderr
+ls /etc mm > err.txt 2> err.txt   # Merge stdout and stderr into same file
+ls /etc mm &> err.txt             # Redirect both stdout and stderr to err.txt
+find /etc -name passwd            # Search for file named "passwd" in /etc
+find /etc =name passwd > output.txt 2> /dev/null # Typo: should be `-name`, redirect output, suppress errors
+less /etc/passwd      # View file one screen at a time (scrollable)
+more /etc/passwd      # View file one screen at a time (limited scrolling)
+ls -lR | less          # Long recursive listing piped into less
+ls -l | tee out.txt    # Display output and write to out.txt at the same time
+vim myfile.txt         # Open file in Vim text editor
