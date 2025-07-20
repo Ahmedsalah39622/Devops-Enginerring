@@ -1,0 +1,102 @@
+special permission
+which passwd
+
+4: set user id.   "run the executable file with owner permission"
+2: set group id.   "in directories new created file group owner will be the group of the directories"
+1: sticky bit      "only root and the owner can delete file from directory wv
+hen if have write permission"
+
+chmod u+s file1
+chmod g+s dir1 
+chmod o+t dir1
+
+umask
+
+normal user 022
+file: 666   -    002    = 664
+dir: 777.   -    002.   = 775
+
+root user.  022
+file: 666   -    002    = 664
+dir: 777.   -    002.   = 775
+
+umask 002
+vim /etc/profile 
+vim /etc/bashrc
+
+for user
+vim .bashrc
+
+---------------
+what are the process
+every running application
+
+parent process. ------> child process
+
+ps     ---> all process in my terminal
+ps a
+ps aux.----> all process in all terminal
+
+ls /proc/
+
+pidof vim 
+ps -ef
+
+top    process in real time.  search for shortcut
+uptime
+
+
+
+sleep 200000
+ctrl+c kill
+ctrl+z stopped
+
+fg %1
+sleep 2000&
+bg %1
+
+cat /dev/zero
+cat /dev/random
+
+dd if=/dev/zero of=dev/null
+
+kill -l
+(1,9,15)
+
+pidof vim
+kill <number>
+kill -9 <number>
+pkill vim
+
+priority -20 to 19
+eny running process take priority 0
+normal user give priority 0 to 19
+
+nice vim test &
+top
+nice -n 15 vim test2 &
+renice -n 17 <process id>
+
+---------
+systemd.    redhat7
+init
+
+systemctl --type services
+
+systemctl status sshd.services
+systemctl stop sshd.services
+echo $?
+systemctl status sshd
+systemctl disable sshd
+systemctl start sshd
+systemctl enable sshd
+systemctl restart sshd
+systemctl reload sshd
+
+systemctl is-active sshd
+systemctl is-enabled sshd
+
+systemctl list-dependancis cups
+
+systemctl mask network
+systemctl unmask network
