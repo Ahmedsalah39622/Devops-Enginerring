@@ -1,0 +1,11 @@
+Problem 1: Deploy a MySQL database called app-database. Use the mysql latest image, 
+and use the -e flag to set MYSQL_ROOT_PASSWORD to P4sSw0rd0!. The container should run in the background.
+
+Problem 2: Deploy an Nginx container using Docker and access the Nginx welcome page via both the container IP and the host machine's IP.
+
+Problem 3: Deploy the Nginx container using Docker with --network host and access it directly from the host. Then compare it with the standard deployment from Problem 2.
+
+Problem 4: Create a custom Docker bridge network with a specific subnet. Deploy two containers on that network and verify they can communicate with each other using container names or IPs.
+
+Problem 5: We will try to ping the Problem 2 container (nginx running on default bridge) from one of the containers on the custom network, and observe what happens.
+Then we will attach that container to the custom network and test connectivity again.
