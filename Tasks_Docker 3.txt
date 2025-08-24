@@ -1,0 +1,29 @@
+Problem 1 :
+§ Run a container Nginx with name mynginx and attach a volume for containing static
+html file
+§ Remove the container
+§ Run a new container with the following:
+§ Attach the volume that was attached to the previous container
+§ Map port 80 to port 9898 on you host machine
+§ Access the html files from your browser
+
+Problem 2:
+§ Run a container nginx with name my-nginx and attach a volume 2 1and attach a volume 2 volumes
+to the container
+§ Volume1 for containing static html file
+§ Volume2 for containing nginx configuration
+§ Edit the html content
+§ Remove the container
+§ Run a new 2 containers with the following:
+§ Attach the 2 volumes that was attached to the previous container in two
+different ways (volume mount – bind mount)
+§ Map port 80 to port 8080 on you host mac
+
+Problem 3:
+§ Create a dockerfile for nginx image with different html content and different nginx conf
+that listen to port 8080 instead of port 80 on the container
+§ Create container from the new \image
+
+Problem 4:
+Create a docker images for a simple flask app by two different ways
+Create a docker container for each image
