@@ -1,0 +1,104 @@
+vim file1.txt
+: set number
+copy --> yy
+past --> pp
+delete --> dd
+
+nano file2.txt
+
+
+linux users (UID):
+1- root 0
+2- services users 1-999
+3- normal users 1000
+
+useradd <username>
+passwd <username>
+
+cat /etc/passwd
+cat /etc/shadow
+
+useradd --help
+usermod --help
+
+which nologin 
+-s /usr/sbin/nologin
+
+id
+id <username>
+id -u <username>
+ 
+groupadd <groupname>
+groupadd --help
+cat /etc/group 
+
+usermod -G
+usermod -aG
+
+groupmod -n new old
+
+su mohammed
+su - mohammed
+
+ 
+sudo passwd ahmed
+
+vim /etc/sudors
+wq!
+
+sudp passwd ahmed
+tail -f /var/log/secure
+
+userdel <username>
+userdel -r <username> # delete home directry
+
+groupdel <groupname>
+
+
+chage -l < username>
+
+touch /etc/skel/test_file
+
+
+---------------------------
+rwx
+r: read
+w: write
+x: execute
+
+rwx          rwx          rwx
+owner        group        other
+
+ls -l
+
+u  owner
+g  group
+o  other
+a  all
+
+chmod g+w file1
+chmod o+w file1
+
+chmod g-w, o-w file1
+chmod u-rw, g=r, o=r file1
+chmod a=rwx file1
+chmod =r file1
+chmod go-r file1
+chmod u= file1
+
+chmod a=rw dirr1
+chmod -R a=rwx dirr1
+
+
+r       w       x
+4       2       1
+
+chmod 754 file1
+chmod 777 -R dirr1
+
+chown mohammed file1
+chown :sales file1
+chgrp admin file1
+
+chown ahmed :admin file1
+chown ahmed :admin -R dirr1

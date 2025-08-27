@@ -20,7 +20,7 @@ different ways (volume mount – bind mount)
 § Map port 80 to port 8080 on you host mac
 
 Problem 3:
-§ Create a dockerfile for nginx image with different html content and different nginx conf
+§ Create a docker file for nginx image with different html content and different nginx conf
 that listen to port 8080 instead of port 80 on the container
 § Create container from the new \image
 

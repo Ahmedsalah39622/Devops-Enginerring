@@ -1,0 +1,86 @@
+bitkeebers
+
+
+#Repo from existing project
+    git init
+    git remote add origin <>
+    git push -u origin master       --> -u pull first
+
+#Branching and merging
+    git branch
+    git branch <BranchName>
+    git checkout <BranchName>
+    git branch -d <BranchName>      -D fore delete
+    git checkout -b <BranchName>
+    git branch -m <NewBranchName>
+    git checkout master
+    git merge <BranchName>
+    git push origin <BranchName>
+
+#Pull Requests with example
+    fork
+    create branch then create pull Request
+    fork project and raise pull Request
+    fork then create branch then create pull Request
+
+#Everyrhing about aliases
+    git config --global alias.st status
+    git config --global alias.br branch
+
+#Mastring stash
+    git stash
+    git stash list
+    git stash pop
+    git stash save "comment message"
+    git stash list
+    git stash apply
+    git stash list
+    git stash pop stash@{2}
+    git stash drop
+    git stash drop stash@{2}
+    git stash show
+    git stash show stash@{2}
+    git stash clear
+
+#Restore and clear
+    untrack file file
+    git restore file
+    git restore --staged file
+    git add .
+    git restore --staged
+    git clean -n    show files need to beleted
+    git clean -f    delete files
+
+#Reseting the Head
+    git log
+    git log --oneline
+    git show <commit id>
+    git diff <commit id>..HEAD
+    git commit --amend      modify commit message
+    git reset <commit id>
+    git reset --hard HEAD~1
+    git reflog
+    git reset --hard HEAD@{1}
+    git reset --hard <commit id>
+    git push origin main --force
+
+#gitignore
+    git add -f text.txt     --> fore add file even if in the .gitignore
+
+#Tags and Releases
+    git tag
+    git tag v1.0.0
+    git push origin v1.0.0
+
+    git tag -a v2.0.0. -m "secend version"
+    git push origin v2.0.0
+
+    git tag -l "v1.*"
+    git tag -d "v1.0.0"
+
+    git push origin --delete v1.0.0
+
+
+#Rebase and merge
+    https://git-scm.com/docs/git-rebase
+    https://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418

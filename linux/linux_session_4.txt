@@ -1,0 +1,109 @@
+cvf : create verbose file
+tar cvf archive.tar file1 file2 file3
+tar tf archive.tar
+tar xvf archive.tar
+
+tar cf etc.tar /etc/
+tar tf etc.tar
+
+du /etc/ -hs 
+touch file1 file2 file3
+chmod 777 file*
+tar cvf archive.tar file1 file2 file3
+tar xvf archive.tar
+    save the permission you must be a root
+
+tar xvf archive.tar -C /home
+
+compress tools: 
+gzip    --->    tar cvzf etc.tar.gz /etc/   --->    tar xvzf etc.tar.gz  
+bzip2   --->    tar cvjf etc.tar.bz2 /etc/  --->    tar xvjf etc.tar.bz2
+xz      --->    tar cvzf etc.tar.xz /etc/   --->    tar xvzf etc.tar.xz 
+
+
+gzip file.txt   
+gunzip file.txt.gz
+
+bzip2 file.txt
+bunzip2 file.txt.bz2
+
+xz file.txt
+unxz file.txt.xz
+gzip -c file.txt > file.gz
+
+------
+systemctl status sshd
+ssh <user>@<ip>
+
+
+ssh-keygen -t rsa
+ssh <ip>
+ssh username@<ip>
+
+who
+
+ssh-copy-id <ip>
+ssh-copy-id <username>@<ip>
+ssh-copy-id -i ~/.ssh/id_rsa.pub <username>@<ip>
+
+vim /etc/ssh/sshd_config
+setenforce 0
+systemctl stop firewall
+
+
+
+scp file1 <ip>:~
+scp file1 <ip>:/home/test_file
+scp <ip>:/home/file /home/ghazy
+scp -r <username>@<ip>:/var/log /tmp
+
+----------------------
+ls -li      inode number: 128 byte
+hard link: have the same inode number must be in the same partition
+ln /etc/passwd passwd
+ln /etc/passwd new_passwd
+
+if i delete the source file i still can access the linked files
+
+soft link:
+must specify the full path
+ln -s /etc/passwd passwd
+if i delete the source the sompolic file will be broken
+file passwd
+
+locate passwd
+touch alahly
+locate alahly
+updatedb
+
+find / -name alahly
+find / -name ALAHLY
+find / -iname ALAHLY
+find / -name "*.txt"
+find / -user donia
+find / -group sales
+find / -uid
+find / -gid
+find / -perm 644
+-----------------------
+arch
+uname -a
+
+rpm
+curl -O https://vault.centos.org/7.9.2009/os/x86_64/Packages/nano-2.3.1-10.el7.x86_64.rpm
+rpm -ivh nano-2.3.1-10.el7.x86_64.rpm
+
+yum
+
+cd /etc/yum.repo/
+yum repolist
+yum install httpd
+yum remove httpd
+yum search httpd
+yum install -y httpd
+yum remove -y httpd
+yum info httpd
+yum list all
+yum list installed
+yum history
+yum history undo 3

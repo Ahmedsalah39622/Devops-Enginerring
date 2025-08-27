@@ -1,0 +1,61 @@
+#introduction
+    What Is Git and Github?
+        - GIT is Distributed Version Control System
+        - Git Is Free and Open Source
+        - Github Is Source for Project and Sources [ GitLab, BitBucket ]
+        - Github Simplify Using Git
+        - You Can Use Git Without Github
+        - Git Has GUI
+
+    Why You Must Learn Git?
+        - Devs Contribute to The Same Project
+        - You Can Revert Changes
+        - You Can Collaborate to Fix Issues
+        - You Can Collaborate to Create New Features
+        - You Can Solve Conflicts
+        - You Can Organize Features
+    
+    Words You Will Hear?
+        - Repository
+        - Branch
+        - Local Repo
+        - Remote Repo
+        - Commit (Snapshot or Checkpoint In Your Local Repo)
+        - Clone [ From Local Or Remote ]
+        - Push [ Upload Local Changes to Remote ]
+        - Pull [ You Pull Changes From Remote Repo To Your Local 1 ]
+        - Pull Request | Tell Other About Your Changes To Pull It From Local To Remote 1
+    
+    Important Notes
+        - Create Repository For Every Project.
+        - Create A New Branch For Every Feature or Enhancement.
+        - No Need To Connect To Remote Repo When Working.
+        - Anyone Can Push and Pull Depend On Permissions
+
+#Create and clone repository
+    git clone <repoURL>
+
+#Add, Reset and Commit
+    git status
+    git add *
+    git commit -m "this is my first commit"
+
+#Generate and test public key
+    ssh-keygen -y rsa -b 4096 -C "<email>"
+    ssh -T git@github.com
+    <git-credential-manager>
+
+#Push from local to remote
+    git branch
+    git remote -v
+    git push <RemoteName> <Branchname>
+
+#Pull from remote to local
+    git pull <RemoteName>
+
+#Git configuration
+    git config -l
+    git help config
+    git config --global user.email
+    git config --global user.email "mohammed@gmail.com"
+    git config --global unset user.email
