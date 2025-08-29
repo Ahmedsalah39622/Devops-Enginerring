@@ -1,0 +1,12 @@
+Problem 1:
+§ Create a reactjs simple app
+§ Create a dockerfile to containerize the reactapp
+§ Build the image and test it
+§ create a dockerfile for the same app in smaller size using multi staging
+
+Problem 2:
+§ Create a dockerfile for ubuntu image which sleeps by default for 5 sec or sleeps
+according to the given number in the docker command
+
+Problem 3:
+§ Push the images created in Problem 1&2 into your docker hub repo
