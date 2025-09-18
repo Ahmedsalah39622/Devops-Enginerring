@@ -1,0 +1,14 @@
+Task: Deploy Nginx using Ansible with Roles
+Use Ansible to deploy an Nginx web server.
+Configure a handler to ensure the Nginx service is started and restarted when needed.
+Deploy a dynamic HTML file that displays information unique to each host (e.g., hostname or IP).
+Update the Nginx configuration so the web server listens on port 8080 instead of the default port 80.
+Organize your automation using normal Ansible playbook and then convert it to Role.
+
+
+Task: Configure Sonatype Nexus Repository Manager with Ansible
+Use Ansible to install and configure Nexus Repository Manager 3 on a Linux host.
+Ensure that the Nexus service is enabled and started (use handlers).
+Configure Nexus to run on port 8081.
+
+guide (https://www.fosstechnix.com/install-nexus-repository-manager-on-ubuntu-24/)
