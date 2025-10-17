@@ -1,0 +1,4 @@
+1. deploying a highly available web application using an Application Load Balancer (ALB) in AWS
+Step 1: Launch Two EC2 Instances
+Step 2: Create a Target Group
+Step 3: Create an Application Load Balancer
